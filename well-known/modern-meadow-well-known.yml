@@ -1,0 +1,73 @@
+generated: '2026-08-01'
+method: probed
+source: live GET of /.well-known/* and contract-discovery paths on every Modern Meadow host
+summary: No /.well-known/ document of any kind is published on either host. Every path
+  below returned the Craft CMS 404 page (an HTML body, not a document), so there is
+  nothing to save verbatim and no WellKnown or SecurityTxt pointer is wired in apis.yml.
+documents: []
+probes:
+- host: modernmeadow.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /openapi.yaml
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /v1/openapi.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /docs
+    status: 404
+  - path: /redoc
+    status: 404
+  - path: /graphql
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /robots.txt
+    status: 200
+  - path: /sitemap.xml
+    status: 200
+  - path: /humans.txt
+    status: 200
+- host: innovera-world.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+robots_ai_posture:
+  source: https://modernmeadow.com/robots.txt
+  fetched: '2026-08-01'
+  http_status: 200
+  note: robots.txt explicitly blocks the major AI crawlers, with the stated rationale
+    "there's no benefit to allowing it to index your site". This is a deliberate opt-out
+    of AI/agent consumption, recorded here because it is the closest thing Modern Meadow
+    publishes to an agent-access policy.
+  disallowed_agents:
+  - GPTBot
+  - Google-Extended
+  - PerplexityBot
+  sitemap: https://modernmeadow.com/sitemaps-1-sitemap.xml
