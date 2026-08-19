@@ -36,7 +36,7 @@ accessModel:
   method: probed
   note: No developer surface. Material sampling and business enquiry go through a contact
     form; there is nothing to sign up for programmatically.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-01'
 modified: '2026-08-01'
 image: https://modernmeadow.com/uploads/images/_1200x630_crop_center-center_82_none/2026-04-09_MENABO0850.jpg?mtime=1753194582
